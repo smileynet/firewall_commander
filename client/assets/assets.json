@@ -1,7 +1,7 @@
 [
   {
-    "key": "logo",
-    "url": "assets/phaser3-logo.png"
+    "key": "firewall",
+    "url": "assets/firewall.svg"
   },
   {
     "key": "tiles",
