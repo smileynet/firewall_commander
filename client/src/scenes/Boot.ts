@@ -35,6 +35,7 @@ export default class BootScene extends Phaser.Scene {
 
             switch (extension) {
                 case 'png':
+                case 'gif':
                     this.load.image(asset.key, asset.url);
                     break;
                 case 'svg':
@@ -47,10 +48,13 @@ export default class BootScene extends Phaser.Scene {
                         this.load.svg(asset.key, asset.url);
                     }
                     break;
+                case 'json':
+                case 'tmj':
+                    this.load.tilemapTiledJSON(asset.key, asset.url);
+                    break;
                 default:
                     console.warn(`Unsupported file extension ${extension}`);
             }
         });
     }
-
 }
