@@ -41,8 +41,10 @@ export default class GameScene extends Phaser.Scene {
   }
 
   shootFireball() {
-    const fireball = spawnEntity(this, 'fire', 64, 64, {spawnPoint: new Vector2(this.firewall.x, this.firewall.y), exitPoint: new Vector2(this.malware.x, this.malware.y)});
-    this.fireballs.add(fireball);
+    if (this.malware.active) { // Check if malware is still active
+      const fireball = spawnEntity(this, 'fire', 64, 64, {spawnPoint: new Vector2(this.firewall.x, this.firewall.y), exitPoint: new Vector2(this.malware.x, this.malware.y)});
+      this.fireballs.add(fireball);
+    }
   }
 
   update() {
