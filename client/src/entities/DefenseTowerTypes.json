@@ -1,0 +1,48 @@
+[
+  {
+    "name" : "DefenseTower1",
+    "health" : 50,
+    "atkDamage" : 5,
+    "atkSpeed" : 500,
+    "atkRange" : 5,
+    "upgradeLevel": 0,
+    "canUpgrade": true,
+    "upgradeLevels": [
+      {
+        "upgradeLevel": 1,
+        "atkDamage": 6,
+        "atkSpeed": 450,
+        "upgradeCost": 100
+      },
+      {
+        "upgradeLevel": 2,
+        "atkDamage": 7,
+        "atkSpeed": 400,
+        "upgradeCost": 100
+      }
+    ]
+  },
+  {
+    "name" : "DefenseTower2",
+    "health" : 100,
+    "atkDamage" : 15,
+    "atkSpeed" : 1000,
+    "atkRange" : 1,
+    "upgradeLevel": 0,
+    "canUpgrade": true,
+    "upgradeLevels": [
+      {
+        "upgradeLevel": 1,
+        "atkDamage": 20,
+        "atkSpeed": 800,
+        "upgradeCost": 150
+      },
+      {
+        "upgradeLevel": 2,
+        "atkDamage": 30,
+        "atkSpeed": 500,
+        "upgradeCost": 200
+      }
+    ]
+  }
+]
