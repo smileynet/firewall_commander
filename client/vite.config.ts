@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import replace from '@rollup/plugin-replace';
+import * as path from "path";
 
 export default defineConfig({
   build: {
@@ -16,5 +17,11 @@ export default defineConfig({
         })
       ]
     }
-  }
+  },
+  resolve: {
+    alias: {
+      '@src': path.resolve(__dirname, 'src'),
+        '@assets': path.resolve(__dirname, 'assets'),
+    },
+  },
 });

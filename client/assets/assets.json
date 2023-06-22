@@ -1,0 +1,18 @@
+[
+  {
+    "key": "firewall",
+    "url": "assets/firewall.svg"
+  },
+  {
+    "key": "malware",
+    "url": "assets/malware.svg"
+  },
+  {
+    "key": "tiles",
+    "url": "assets/tiles.gif"
+  },
+  {
+    "key": "map",
+    "url": "assets/map.tmj"
+  }
+]
