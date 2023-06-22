@@ -78,3 +78,4 @@ export interface projectile {
     velY: number;
     damage: number;
 }
+

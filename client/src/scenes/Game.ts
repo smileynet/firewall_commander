@@ -16,10 +16,6 @@ function spawnEntity(scene: Phaser.Scene, type: string, coords: Vector2) {
   });
 }
 
-export default class GameScene extends Phaser.Scene {
-  constructor() {
-    super('GameScene');
-  }
 
   create() {
     spawnMap(this);
