@@ -1,9 +1,9 @@
 import Phaser from "phaser";
 import {MapPath} from "@src/map/interaces";
 
-export function spawnEntity(scene: Phaser.Scene, type: string, mapPath: MapPath) {
+export function spawnEntity(scene: Phaser.Scene, type: string, width:number, height:number, mapPath: MapPath) {
     const entity = scene.physics.add.image(mapPath.spawnPoint.x, mapPath.spawnPoint.y, type);
-    entity.setDisplaySize(128, 128)
+    entity.setDisplaySize(width, height)
     entity.setInteractive().on('pointerdown', () => {
         console.log(`${type} was clicked!`);
     });
@@ -14,8 +14,11 @@ export function spawnEntity(scene: Phaser.Scene, type: string, mapPath: MapPath)
             targets: entity,
             x: mapPath.exitPoint.x,
             y: mapPath.exitPoint.y,
-            duration: 2000,
+            duration: 5000,
             ease: 'Linear',
+            onComplete: () => {
+                entity.destroy();
+            }
         });
     }
 

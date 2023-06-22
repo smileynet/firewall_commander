@@ -13,20 +13,20 @@ export default class GameScene extends Phaser.Scene {
   constructor() {
     super('GameScene');
     this.mapPath = {
-      spawnPoint: new Vector2(100,100),
-      exitPoint: new Vector2(800,600)
+      spawnPoint: new Vector2(2000,725),
+      exitPoint: new Vector2(0,725)
     };
   }
 
   create() {
     spawnMap(this);
-    this.firewall = spawnEntity(this, 'firewall', {spawnPoint: new Vector2(200, 100), exitPoint: new Vector2(200, 100)});
-    this.malware = spawnEntity(this, 'malware', this.mapPath);
+    this.firewall = spawnEntity(this, 'firewall', 200, 200, {spawnPoint: new Vector2(775, 425), exitPoint: new Vector2(200, 100)});
+    this.malware = spawnEntity(this, 'malware', 200, 200, this.mapPath);
 
     this.fireballs = this.physics.add.group();
 
     this.time.addEvent({
-      delay: 500,
+      delay: 750,
       callback: this.shootFireball,
       callbackScope: this,
       loop: true
@@ -41,7 +41,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   shootFireball() {
-    const fireball = spawnEntity(this, 'fire', {spawnPoint: new Vector2(this.firewall.x, this.firewall.y), exitPoint: new Vector2(this.malware.x, this.malware.y)});
+    const fireball = spawnEntity(this, 'fire', 64, 64, {spawnPoint: new Vector2(this.firewall.x, this.firewall.y), exitPoint: new Vector2(this.malware.x, this.malware.y)});
     this.fireballs.add(fireball);
   }
 
