@@ -10,15 +10,9 @@ export default class GameScene extends Phaser.Scene {
     const tileset = map.addTilesetImage('tiles');
     const layer = map.createLayer('background', tileset, 0, 0);
     console.debug("layer", layer);
-    const logo = this.add.image(400, 70, 'firewall');
-
-    this.tweens.add({
-      targets: logo,
-      y: 350,
-      duration: 1500,
-      ease: 'Sine.inOut',
-      yoyo: true,
-      repeat: -1
-    });
+    const firewall = this.add.image(200, 70, 'firewall');
+    firewall.setDisplaySize(64, 64)
+    const malware = this.add.image(400, 70, 'malware');
+    malware.setDisplaySize(64, 64)
   }
 }
