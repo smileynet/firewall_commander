@@ -72,6 +72,9 @@ export interface unit extends entity, target, attacker, mobile, allegiance, plac
 
 }
 
+/*
+ * Interface for projectiles
+ */
 export interface projectile {
     locX: number;
     locY: number;
