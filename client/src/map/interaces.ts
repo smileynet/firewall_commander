@@ -1,14 +1,7 @@
-export interface SpawnPoint {
-    x: number;
-    y: number;
+import Vector2 = Phaser.Math.Vector2;
+
+export interface MapPath {
+    spawnPoint: Vector2;
+    exitPoint: Vector2;
 }
 
-export interface EndPoint {
-    x: number;
-    y: number;
-}
-
-export interface MapPaths {
-    spawnPoint: SpawnPoint;
-    endPoint: EndPoint;
-}
