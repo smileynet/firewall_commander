@@ -1,6 +1,6 @@
 // Feature interfaces
 
-export interface entity {
+export interface Entity {
     id: number;
     name: string;
 }
@@ -8,14 +8,14 @@ export interface entity {
 /*
  * Interface for defensive combat feature
  */
-export interface target {
+export interface Target {
     health: number;
 }
 
 /*
  * Interface for offensive combat feature
  */
-export interface attacker {
+export interface Attacker {
     atkDamage: number;
     atkSpeed: number;
     atkRange: number;
@@ -24,21 +24,21 @@ export interface attacker {
 /*
  * Interface for movement
  */
-export interface mobile {
+export interface Mobile {
     movementSpeed: number;
 }
 
 /*
  * Interface for allegiance (true for ally or false for enemy)
  */
-export interface allegiance {
+export interface Allegiance {
     isAlly: boolean;
 }
 
 /*
  * Interface for upgrades
  */
-export interface upgradable {
+export interface Upgradable {
     upgradeLevel: number;
     canUpgrade: boolean;
     upgradeCost: number;
@@ -47,7 +47,7 @@ export interface upgradable {
 /*
  * Interface for placement
  */
-export interface placeable {
+export interface Placeable {
     isPlaced: boolean;
     isStatic: boolean;
     locX: number;
@@ -57,21 +57,21 @@ export interface placeable {
 /*
  * Interface for towers
  */
-export interface tower extends entity, target, attacker, allegiance, upgradable, placeable {
+export interface Tower extends Entity, Target, Attacker, Allegiance, Upgradable, Placeable {
 
 }
 
 /*
  * Interface for units
  */
-export interface unit extends entity, target, attacker, mobile, allegiance, placeable {
+export interface Unit extends Entity, Target, Attacker, Mobile, Allegiance, Placeable {
 
 }
 
 /*
  * Interface for projectiles
  */
-export interface projectile {
+export interface Projectile {
     locX: number;
     locY: number;
     velX: number;
