@@ -48,7 +48,6 @@ export interface Upgradable {
  * Interface for placement
  */
 export interface Placeable {
-    isPlaced: boolean;
     isStatic: boolean;
     locX: number;
     locY: number;
