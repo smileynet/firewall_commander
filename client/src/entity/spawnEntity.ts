@@ -3,7 +3,7 @@ import {MapPath} from "@src/map/interaces";
 
 export function spawnEntity(scene: Phaser.Scene, type: string, mapPath: MapPath) {
     const entity = scene.physics.add.image(mapPath.spawnPoint.x, mapPath.spawnPoint.y, type);
-    entity.setDisplaySize(64, 64)
+    entity.setDisplaySize(128, 128)
     entity.setInteractive().on('pointerdown', () => {
         console.log(`${type} was clicked!`);
     });
