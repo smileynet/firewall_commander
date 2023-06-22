@@ -5,11 +5,11 @@
   },
   {
     "key": "firewall",
-    "url": "assets/firewall.svg"
+    "url": "assets/firewall-tower.png"
   },
   {
     "key": "malware",
-    "url": "assets/malware.svg"
+    "url": "assets/bad-guy.png"
   },
   {
     "key": "tiles",
