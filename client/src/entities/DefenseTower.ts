@@ -1,43 +1,31 @@
-import { Tower } from '../entity/interfaces'
+import {Attack, Tower} from '../entity/interfaces'
+import Vector2 = Phaser.Math.Vector2;
 
 export class DefenseTower implements Tower {
     id: number;
-    name: string;
+    type: string;
     health: number;
-    atkDamage: number;
-    atkSpeed: number;
-    atkRange: number;
+    attackCapabilities: Attack;
     upgradeLevel: number;
     canUpgrade: boolean;
     upgradeCost: number;
     isAlly: boolean;
-    isStatic: boolean;
-    locX: number;
-    locY: number;
+    coordinates: Vector2;
 
-    public constructor(id: number,
-                       name: string,
-                       health: number,
-                       atkDamage: number,
-                       atkSpeed: number,
-                       atkRange: number,
-                       upgradeLevel: number,
-                       canUpgrade: boolean,
-                       upgradeCost: number,
-                       locX: number,
-                       locY: number) {
+    constructor(id: number,
+                name: string, health: number,
+                attackCapabilities: Attack, upgradeLevel: number,
+                canUpgrade: boolean, upgradeCost: number,
+                coordinates: Vector2)
+    {
         this.id = id;
-        this.name = name;
+        this.type = name;
         this.health = health;
-        this.atkDamage = atkDamage;
-        this.atkSpeed = atkSpeed;
-        this.atkRange = atkRange;
+        this.attackCapabilities = attackCapabilities;
         this.upgradeLevel = upgradeLevel;
         this.canUpgrade = canUpgrade;
         this.upgradeCost = upgradeCost;
         this.isAlly = true;
-        this.isStatic = true;
-        this.locX = locX;
-        this.locY = locY;
+        this.coordinates = coordinates;
     }
 }

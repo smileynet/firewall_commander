@@ -1,6 +1,6 @@
 [
   {
-    "name" : "Enemy1",
+    "type": "Enemy1",
     "health" : 20,
     "atkDamage" : 5,
     "atkSpeed" : 1000,
@@ -8,7 +8,7 @@
     "movementSpeed" : 0.5
   },
   {
-    "name" : "Enemy2",
+    "type": "Enemy2",
     "health" : 15,
     "atkDamage" : 1,
     "atkSpeed" : 500,

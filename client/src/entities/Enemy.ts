@@ -1,37 +1,23 @@
-import { Unit } from '../entity/interfaces'
+import {Attack, Unit} from '../entity/interfaces'
+import Vector2 = Phaser.Math.Vector2;
 
 export class Enemy implements Unit {
     id: number;
-    name: string;
+    type: string;
     health: number;
-    atkDamage: number;
-    atkSpeed: number;
-    atkRange: number;
+    attackCapabilities: Attack;
     movementSpeed: number;
-    isAlly: boolean;
-    isStatic: boolean;
-    locX: number;
-    locY: number;
-
-    public constructor(id: number,
-                       name: string,
-                       health: number,
-                       atkDamage: number,
-                       atkSpeed: number,
-                       atkRange: number,
-                       movementSpeed: number,
-                       locX: number,
-                       locY: number) {
+    isAlly: boolean = false;
+    coordinates: Vector2;
+    constructor(id: number, type: string,
+                health: number, movementSpeed: number,
+                attackCapabilities: Attack, coordinates: Vector2 )
+    {
         this.id = id;
-        this.name = name;
+        this.type = type;
         this.health = health;
-        this.atkDamage = atkDamage;
-        this.atkSpeed = atkSpeed;
-        this.atkRange = atkRange;
+        this.attackCapabilities = attackCapabilities;
         this.movementSpeed = movementSpeed;
-        this.isAlly = false;
-        this.isStatic = false;
-        this.locX = locX;
-        this.locY = locY;
+        this.coordinates = coordinates;
     }
 }
