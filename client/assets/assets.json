@@ -1,0 +1,14 @@
+[
+  {
+    "key": "logo",
+    "url": "assets/phaser3-logo.png"
+  },
+  {
+    "key": "tiles",
+    "url": "assets/tiles.png"
+  },
+  {
+    "key": "map",
+    "url": "assets/map.tmj"
+  }
+]
