@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Enemy1",
+    "health" : 20,
+    "atkDamage" : 5,
+    "atkSpeed" : 1000,
+    "atkRange" : 2,
+    "movementSpeed" : 0.5
+  },
+  {
+    "type": "Enemy2",
+    "health" : 15,
+    "atkDamage" : 1,
+    "atkSpeed" : 500,
+    "atkRange" : 3,
+    "movementSpeed" : 0.5
+  }
+]

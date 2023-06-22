@@ -1,21 +1,23 @@
 // Feature interfaces
 
-export interface entity {
+import Vector2 = Phaser.Math.Vector2;
+
+export interface Entity {
     id: number;
-    name: string;
+    type: string;
 }
 
 /*
  * Interface for defensive combat feature
  */
-export interface target {
+export interface Target {
     health: number;
 }
 
 /*
  * Interface for offensive combat feature
  */
-export interface attacker {
+export interface Attack {
     atkDamage: number;
     atkSpeed: number;
     atkRange: number;
@@ -24,58 +26,48 @@ export interface attacker {
 /*
  * Interface for movement
  */
-export interface mobile {
+export interface Movement {
     movementSpeed: number;
 }
 
 /*
  * Interface for allegiance (true for ally or false for enemy)
  */
-export interface allegiance {
+export interface Allegiance {
     isAlly: boolean;
 }
 
 /*
  * Interface for upgrades
  */
-export interface upgradable {
+export interface Upgradable {
     upgradeLevel: number;
     canUpgrade: boolean;
     upgradeCost: number;
 }
 
 /*
- * Interface for placement
- */
-export interface placeable {
-    isPlaced: boolean;
-    isStatic: boolean;
-    locX: number;
-    locY: number;
-}
-
-/*
  * Interface for towers
  */
-export interface tower extends entity, target, attacker, allegiance, upgradable, placeable {
-
+export interface Tower extends Entity, Target, Allegiance, Upgradable {
+    attackCapabilities: Attack;
+    coordinates: Vector2;
 }
 
 /*
  * Interface for units
  */
-export interface unit extends entity, target, attacker, mobile, allegiance, placeable {
-
+export interface Unit extends Entity, Target, Movement, Allegiance {
+    attackCapabilities: Attack;
+    coordinates: Vector2;
 }
 
 /*
  * Interface for projectiles
  */
-export interface projectile {
-    locX: number;
-    locY: number;
-    velX: number;
-    velY: number;
+export interface Projectile {
+    position: Vector2;
+    velocity: Vector2;
     damage: number;
 }
 
