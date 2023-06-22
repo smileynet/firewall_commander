@@ -1,5 +1,9 @@
 [
   {
+    "key": "fire",
+    "url": "assets/fire.png"
+  },
+  {
     "key": "firewall",
     "url": "assets/firewall.svg"
   },
