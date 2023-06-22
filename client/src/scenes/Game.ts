@@ -5,7 +5,7 @@ import Vector2 = Phaser.Math.Vector2;
 import {MapPath} from "@src/map/interaces";
 
 export default class GameScene extends Phaser.Scene {
-  private mapPath!: MapPath;
+  private readonly mapPath!: MapPath;
   private malware!: Phaser.Physics.Arcade.Image;
   private firewall!: Phaser.Physics.Arcade.Image;
   private fireballs!: Phaser.Physics.Arcade.Group;
@@ -32,7 +32,7 @@ export default class GameScene extends Phaser.Scene {
       loop: true
     });
 
-    this.physics.add.collider(this.malware, this.fireballs, this.handleCollision, undefined, this);
+    this.physics.add.collider(this.malware, this.fireballs, this.handleCollision as ArcadePhysicsCallback, undefined, this);
   }
 
   handleCollision(malware: Phaser.Physics.Arcade.Image, fireball: Phaser.Physics.Arcade.Image) {
@@ -41,7 +41,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   shootFireball() {
-    if (this.malware.active) { // Check if malware is still active
+    if (this.malware.active) {
       const fireball = spawnEntity(this, 'fire', 64, 64, {spawnPoint: new Vector2(this.firewall.x, this.firewall.y), exitPoint: new Vector2(this.malware.x, this.malware.y)});
       this.fireballs.add(fireball);
     }

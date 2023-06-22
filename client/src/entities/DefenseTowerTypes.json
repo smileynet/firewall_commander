@@ -1,6 +1,6 @@
 [
   {
-    "name" : "DefenseTower1",
+    "type": "DefenseTower1",
     "health" : 50,
     "atkDamage" : 5,
     "atkSpeed" : 500,
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "name" : "DefenseTower2",
+    "type": "DefenseTower2",
     "health" : 100,
     "atkDamage" : 15,
     "atkSpeed" : 1000,
