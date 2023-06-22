@@ -1,4 +1,4 @@
-import { Enemy } from './Enemy'
+import { Enemy} from "@src/entities/Enemy"
 import enemyTypes from './EnemyTypes.json'
 
 export class EnemySpawner {
@@ -13,7 +13,7 @@ export class EnemySpawner {
     public spawnEnemy(name: string, health: number, atkDamage: number, atkSpeed: number, atkRange: number, movementSpeed: number, locX: number, locY: number) {
         let newEnemy: Enemy;
         newEnemy = new Enemy(this.counter++, name, health, atkDamage, atkSpeed, atkRange, movementSpeed, locX, locY);
-        this.enemyList.push()
+        this.enemyList.push(newEnemy);
 
         return newEnemy;
     }
