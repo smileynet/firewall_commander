@@ -10,9 +10,6 @@ export interface entity {
  */
 export interface target {
     health: number;
-    isAlive: boolean;
-    targetable: boolean;
-    invincible: boolean;
 }
 
 /*
@@ -22,7 +19,6 @@ export interface attacker {
     atkDamage: number;
     atkSpeed: number;
     atkRange: number;
-    canAttack: boolean;
 }
 
 /*
@@ -81,5 +77,4 @@ export interface projectile {
     velX: number;
     velY: number;
     damage: number;
-    isActive: boolean;
 }
